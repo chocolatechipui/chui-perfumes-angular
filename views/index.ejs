@@ -32,7 +32,7 @@
           $.UIGoBackToArticle('#main');
         });
         $('#shoppingCart').on('singletap', function() {
-          $.UIGoToArticle('#cart');
+          if ($scope.cart.purchases.length) $.UIGoToArticle('#cart');
         });
       });
 
@@ -142,7 +142,7 @@
   </article>
   <div class='toolbar next'>
     <a href="javascript:void(null)" id='addToCart' ng-click='cart.addToCart()' class="button add"></a>
-    <a href="javascript:void(null)" id="shoppingCart" class="button align-flush">Cart</a>
+    <a href="javascript:void(null)" id="shoppingCart" class="button align-flush"></a>
   </div>
   <nav class="next">
     <a href='#' class='button back' id='backToGenre'>{{ perfumeName }}</a>
@@ -161,7 +161,7 @@
       <h2>Total:</h2>
       <ul class="list">
         <li class='comp'>
-          <div><h3>Total Items</h3></div>
+          <div><h3>Total Items:</h3></div>
           <aside><h4 id="totalItems" ng-bind='cart.purchases.length'></h4></aside>
         </li>
         <li class='comp'>
@@ -169,15 +169,12 @@
           <aside><h4 id="totalCost" ng-bind='cart.totalCost() | currency'>0.00</h4></aside>
         </li>
       </ul>
-      <div>
+      <div id='orderButtons'>
         <a id="placeOrder" href="#" class="button action">Place Order</a>
-        <br>
         <a id="cancelOrder" ng-click='cart.cancelOrder()' href="#" class="button action">Cancel Order</a>
       </div>
     </section>
   </article>
-  <div class="toolbar next">
-  </div>
   <nav class="next">
     <a href='#' class='button back' id='backToGenre'>Cart</a>
     <h1>Confirmation</h1>
