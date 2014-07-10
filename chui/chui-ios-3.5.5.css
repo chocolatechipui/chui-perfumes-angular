@@ -257,8 +257,8 @@ a.button {
   text-overflow: ellipsis;
   vertical-align: middle;
   text-align: center;
-  color: #007aff;
-  border-color: #007aff;
+  color: #d34057;
+  border-color: #d34057;
   background-color: rgba(255, 255, 255, 0.01);
 }
 .isDesktop a.button:hover {
@@ -270,7 +270,7 @@ a.button.backTo {
   text-align: left;
   padding: 0 0 0 20px !important;
   line-height: 28px;
-  color: #007aff;
+  color: #fff;
   border: none;
   position: relative;
   overflow: hidden;
@@ -283,7 +283,7 @@ a.button.backTo::before {
   display: block;
   content: '';
   border: solid 1px transparent;
-  background-color: #007aff;
+  background-color: #fff;
   -webkit-mask-position: 50% 50%;
   -webkit-mask-size: 90% 90%;
   -webkit-mask-repeat: no-repeat;
@@ -297,8 +297,8 @@ a.button.backTo::before {
   top: 2px;
 }
 a.button.action {
-  color: #585d63;
-  border: solid 1px #585d63;
+  color: #d34057;
+  border: solid 1px #d34057;
   border-radius: 20px;
   display: block;
   margin: 0 auto;
@@ -353,8 +353,8 @@ html[dir=rtl] .toolbar > .button.align-flush {
    Nav Bars
    =========================== */
 #global-nav {
-  background-color: #f7f7f7;
-  border-bottom: solid 1px #a7a7aa;
+  background-color: #d34057;
+  border-bottom: solid 1px #bb394d;
   overflow: hidden;
 }
 nav {
@@ -397,6 +397,7 @@ nav > h1 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  color: #fff;
 }
 nav > h1 + a.button {
   margin: 0;
@@ -475,8 +476,8 @@ nav > a.button + h1 {
   width: 22px;
   height: 20px;
   border-radius: 20px;
-  border: solid 1px #007aff;
-  color: #007aff;
+  border: solid 1px #d34057;
+  color: #d34057;
   font: bold 14px/0 'Times', serif;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -586,6 +587,8 @@ section h2.normal-case {
 }
 section h2.wrap {
   white-space: normal;
+  margin-left: 10px;
+  line-height: 14pt;
 }
 html[dir=rtl] section h2 {
   margin: 26px 15px 6px 0;
@@ -693,8 +696,8 @@ li.comp > aside > .show-detail::after {
   width: 22px;
   height: 20px;
   border-radius: 20px;
-  border: solid 1px #007aff;
-  color: #007aff;
+  border: solid 1px #d34057;
+  color: #d34057;
   font: bold 14px/0 'Times', serif;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -921,7 +924,7 @@ html[dir=rtl] .grid {
   box-sizing: border-box;
 }
 .segmented:not(.paging) > .button {
-  border: solid 1px #007aff;
+  border: solid 1px #d34057;
   padding: 4px 15px;
   border-left: none;
   background-color: rgba(255, 255, 255, 0.65);
@@ -947,7 +950,7 @@ html[dir=rtl] .grid {
   text-align: center;
 }
 .segmented:not(.paging) > .button:first-of-type {
-  border-left: solid 1px #007aff;
+  border-left: solid 1px #d34057;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
 }
@@ -958,7 +961,7 @@ html[dir=rtl] .grid {
 .isDesktop .segmented:not(.paging) > .button:hover,
 .segmented:not(.paging) > .button.selected {
   color: #ffffff;
-  background-color: #007aff;
+  background-color: #d34057;
   opacity: 1 !important;
 }
 div.horizontal.centered > .segmented {
@@ -989,7 +992,7 @@ html[dir=rtl] .segmented .button:first-of-type {
   border-bottom-right-radius: 4px;
 }
 html[dir=rtl] .segmented .button:last-of-type {
-  border-left: solid 1px #007aff;
+  border-left: solid 1px #d34057;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   border-top-left-radius: 4px;
@@ -1008,7 +1011,7 @@ html[dir=rtl] .segmented .button:last-of-type {
 .segmented.paging.vertical > .button {
   border: none;
   background: none !important;
-  color: #007aff;
+  color: #d34057;
   width: 40px;
   height: 40px;
   -webkit-box-sizing: border-box;
@@ -1021,7 +1024,7 @@ html[dir=rtl] .segmented .button:last-of-type {
 .segmented.paging > .button.selected,
 .segmented.paging.vertical > .button.selected {
   opacity: .5 !important;
-  color: #007aff;
+  color: #d34057;
   background-color: transparent !important;
 }
 .segmented.paging > .button::before,
@@ -1035,7 +1038,7 @@ html[dir=rtl] .segmented .button:last-of-type {
   left: 0;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: 50% 50%;
-  background-color: #007aff;
+  background-color: #d34057;
 }
 .segmented.paging.horizontal > .button:first-of-type::before {
   -webkit-mask-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D'1.1'%20id%3D'svg2'%20xmlns%3Asvg%3D'http%3A//www.w3.org/2000/svg'%20xmlns%3D'http%3A//www.w3.org/2000/svg'%20xmlns%3Axlink%3D'http%3A//www.w3.org/1999/xlink'%20x%3D'0px'%20y%3D'0px'%20width%3D'48px'%20height%3D'48px'%20viewBox%3D'0%200%2048%2048'%20enable-background%3D'new%200%200%2048%2048'%20xml%3Aspace%3D'preserve'%3E%3Cg%20id%3D'g4'%3E%3C/g%3E%3Cg%20id%3D'layer2'%3E%3Cpath%20id%3D'path7'%20d%3D'M28.038,8.381l2.674,2.599L18.545,23.146l12.086,12.086l-2.593,2.679L17.909,27.782l-4.636-4.636l4.636-4.636%20L28.038,8.381z'/%3E%3C/g%3E%3C/svg%3E");
@@ -1667,11 +1670,11 @@ textarea {
   display: none !important;
 }
 .select-box-label {
-  border: solid 1px #007aff;
+  border: solid 1px #d34057;
   border-radius: 3px;
   padding: 2px 30px 2px 10px;
   font-size: 11px;
-  background-image: -webkit-linear-gradient(top, #007aff, #007aff);
+  background-image: -webkit-linear-gradient(top, #d34057, #d34057);
   background-position: top right;
   background-size: 20px 100%;
   background-repeat: no-repeat;
@@ -1798,7 +1801,7 @@ html[dir=rtl] input[type="range"] {
   -webkit-mask-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3Asvg%3D'http%3A//www.w3.org/2000/svg'%20xmlns%3D'http%3A//www.w3.org/2000/svg'%20version%3D'1.1'%20width%3D'32'%20height%3D'26'%20viewBox%3D'0%200%2032%2026'%20id%3D'svg2'%3E%3Cdefs%20id%3D'defs8'%20/%3E%3Cg%20transform%3D'translate%280.13135593,-0.34322034%29'%20id%3D'Page-1'%20style%3D'fill%3Anone%3Bstroke%3Anone'%3E%3Cg%20id%3D'Artboard-1'%20style%3D'stroke%3A%23000000%3Bstroke-width%3A5'%3E%3Cpath%20d%3D'm%2010.500868,22.761362%2011.023688,0%200,-27.9582975'%20transform%3D'matrix%280.70710678,0.70710678,-0.70710678,0.70710678,10.899977,-8.7504466%29'%20id%3D'Rectangle-1'%20/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   float: right;
   margin-top: -20px;
-  background-color: #007aff;
+  background-color: #d34057;
 }
 .isDesktop .list.select li.selected:hover {
   background-color: #d9d9d9;
@@ -2015,7 +2018,7 @@ html[dir=rtl] .slide-out.open {
   display: block;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  border: solid 1px #007aff;
+  border: solid 1px #d34057;
   width: 40px;
   height: 30px;
   font: bold 16px/30px Helvetica;
@@ -2027,7 +2030,7 @@ html[dir=rtl] .slide-out.open {
   background-color: rgba(255, 255, 255, 0.35);
   width: 33px;
   height: 30px;
-  border: solid 1px #007aff;
+  border: solid 1px #d34057;
   border-radius: 4px;
   text-align: center;
   font-weight: bold;
@@ -2053,14 +2056,14 @@ html[dir=rtl] .stepper > .button:first-of-type {
   border-radius: 4px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  border-right: solid 1px #007aff;
+  border-right: solid 1px #d34057;
   border-left: none;
 }
 html[dir=rtl] .stepper > .button:last-of-type {
   border-radius: 4px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  border-left: solid 1px #007aff;
+  border-left: solid 1px #d34057;
   border-right: none;
 }
 /* ==============================
@@ -2075,7 +2078,7 @@ html[dir=rtl] .stepper > .button:last-of-type {
   width: auto;
   font-size: 15px;
   line-height: 26px;
-  color: #007aff;
+  color: #d34057;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -2309,12 +2312,12 @@ body.hasTabBar .next:not(.navigable) {
 }
 .isDesktop .tabbar > .button:hover,
 .tabbar > .button.selected {
-  color: #007aff !important;
+  color: #d34057 !important;
   opacity: 1 !important;
 }
 .isDesktop .tabbar > .button:hover > .icon,
 .tabbar > .button.selected > .icon {
-  background-color: #007aff;
+  background-color: #d34057;
 }
 .tabbar > .button > .icon {
   margin: 0 auto;
@@ -2400,11 +2403,11 @@ body.hasTabBar .next:not(.navigable) {
   margin-right: 5px;
 }
 .pagination > li.selected {
-  background-color: #007aff;
+  background-color: #d34057;
   cursor: pointer;
 }
 .isDesktop .pagination > li:hover {
-  background-color: #007aff;
+  background-color: #d34057;
   cursor: pointer;
 }
 .pagination > li:last-of-type {
