@@ -17,6 +17,8 @@
     <script type='text/javascript' src='/javascripts/jquery-2.1.1.min.js'></script>
     <script type='text/javascript' src='/chui/chui-3.5.5.js'></script>
     <script type='text/javascript' src='/javascripts/angular.min.js'></script>
+    <script type='text/javascript' src='/javascripts/angular-touch.js'></script>
+    <script type='text/javascript' src='/javascripts/gestures.js'></script>
     <script>
 
       // Define button interactions:
@@ -31,13 +33,15 @@
         $('#cancelOrder').on('singletap', function() {
           $.UIGoBackToArticle('#main');
         });
+        var shoppingCartScope = $('#cart').scope();
         $('#shoppingCart').on('singletap', function() {
-          if ($scope.cart.purchases.length) $.UIGoToArticle('#cart');
+          console.dir(shoppingCartScope)
+          if (shoppingCartScope.cart.purchases.length) $.UIGoToArticle('#cart');
         });
       });
 
       // Define Angular controller:
-      var app = angular.module("perfumesApp", []);
+      var app = angular.module("perfumesApp", ['ngTouch','angular-gestures']);
       app.controller("perfumesCtrl", function ($scope, $http) {
         $scope.perfumesCollection = [];
         $scope.perfumes = {};
@@ -95,7 +99,7 @@
   <article id='main' class='current'>
     <section>
       <ul class='list' id='perfumeGenres'>
-        <li ng-click='perfumes.getGenreOfPerfume(perfume)' data-goto='perfumeList' ng-repeat="perfume in perfumesCollection">{{perfume.title}}</li>
+        <li hm-tap='perfumes.getGenreOfPerfume(perfume)' data-goto='perfumeList' ng-repeat="perfume in perfumesCollection">{{perfume.title}}</li>
       </ul>
     </section>
   </article>  
@@ -106,7 +110,7 @@
   <article class='next' id='perfumeList'>
     <section>
       <ul class='list' id='available_perfumes'>
-        <li ng-click='perfumes.showDetail(perfume)' class='comp' ng-repeat="perfume in list" data-goto='detail'>
+        <li hm-tap='perfumes.showDetail(perfume)' class='comp' ng-repeat="perfume in list" data-goto='detail'>
           <aside>
             <img height='60' ng-src='{{ perfume.img_prev }}'>
           </aside>
@@ -141,7 +145,7 @@
     </section>
   </article>
   <div class='toolbar next'>
-    <a href="javascript:void(null)" id='addToCart' ng-click='cart.addToCart()' class="button add"></a>
+    <a href="javascript:void(null)" id='addToCart' hm-tap='cart.addToCart()' class="button add"></a>
     <a href="javascript:void(null)" id="shoppingCart" class="button align-flush"></a>
   </div>
   <nav class="next">
@@ -171,7 +175,7 @@
       </ul>
       <div id='orderButtons'>
         <a id="placeOrder" href="#" class="button action">Place Order</a>
-        <a id="cancelOrder" ng-click='cart.cancelOrder()' href="#" class="button action">Cancel Order</a>
+        <a id="cancelOrder" hm-tap='cart.cancelOrder()' href="#" class="button action">Cancel Order</a>
       </div>
     </section>
   </article>
